@@ -1,0 +1,20 @@
+{
+  "name": "ApiDoc",
+  "version": "1.0.0",
+  "description": "Документация API",
+  "title": "Express Starter Kit",
+  "url" : "",
+  "sampleUrl": "",
+  "header": {
+    "title": "",
+    "filename": ""
+  },
+  "footer": {
+    "title": "",
+    "filename": ""
+  },
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+}

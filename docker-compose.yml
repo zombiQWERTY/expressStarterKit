@@ -1,0 +1,43 @@
+version: "2"
+
+services:
+  postgres:
+    restart: always
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+  dev:
+    build: .
+    ports:
+      - "9095:8080"
+    command: bash -c "yarn && node ./bin/createDB.js && yarn run dev"
+    depends_on:
+      - postgres
+    volumes:
+      - .:/home/apps/sstest
+      - ./public:/home/data/public
+
+  prod:
+    build: .
+    ports:
+      - "9090:8080"
+    command: bash -c "yarn && NODE_ENV=production node ./bin/createDB.js && yarn run start"
+    depends_on:
+      - postgres
+    volumes:
+      - .:/home/apps/sstest
+      - ./public:/home/data/public
+
+  test:
+    build: .
+    command: bash -c "yarn && NODE_ENV=test node ./bin/createDB.js && sequelize db:migrate --env test && yarn test"
+    depends_on:
+      - postgres
+    volumes:
+      - .:/home/apps/sstest
+      - ./public:/home/data/public

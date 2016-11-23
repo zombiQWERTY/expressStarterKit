@@ -1,0 +1,23 @@
+{
+  "development": {
+    "dialect": "postgres",
+    "database": "expressstarterkit_development",
+    "host": "postgres",
+    "username": "postgres",
+    "password": "postgres"
+  },
+  "test": {
+    "dialect": "postgres",
+    "database": "expressstarterkit_test",
+    "host": "postgres",
+    "username": "postgres",
+    "password": "postgres"
+  },
+  "production": {
+    "dialect": "postgres",
+    "database": "expressstarterkit_production",
+    "host": "postgres",
+    "username": "postgres",
+    "password": "postgres"
+  }
+}
