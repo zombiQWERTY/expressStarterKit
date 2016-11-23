@@ -30,20 +30,19 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "compose-middleware": "^2.2.0",
-    "cors": "^2.8.0",
-    "exif-parser": "^0.1.9",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
     "express-async-wrap": "^1.0.0",
     "express-log": "^1.0.1",
     "express-qs-parser": "^0.0.1",
-    "express-static": "^1.0.3",
+    "serve-static": "^1.11.1",
     "import-dir": "0.0.1",
     "json3": "^3.3.2",
-    "lodash": "^4.16.6",
+    "lodash": "^4.17.2",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
     "pug": "^2.0.0-beta6",
-    "sequelize": "^3.24.8"
+    "sequelize": "^3.27.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
