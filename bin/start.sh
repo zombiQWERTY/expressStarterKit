@@ -2,4 +2,4 @@
 
 (rimraf ./dist)
 (yarn run compile)
-(NODE_ENV=production forever ./forever.json)
+(NODE_ENV=production node ./dist)

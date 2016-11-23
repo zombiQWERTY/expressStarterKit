@@ -1,7 +1,0 @@
-{
-  "uid": "express_starter_kit",
-  "append": true,
-  "watch": false,
-  "script": "./dist/index.js",
-  "args": ["--port", "8080"]
-}
